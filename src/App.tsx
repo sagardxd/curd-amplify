@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import { Route, Routes } from "react-router-dom"
 import Contact from "./pages/Contact"
 
 function App() {
@@ -6,8 +7,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Contact />
-
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   )
 }
